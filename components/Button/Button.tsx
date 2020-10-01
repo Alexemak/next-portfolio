@@ -1,6 +1,5 @@
-import React from 'react';
 import cs from 'classNames'
-import styled, { css } from 'astroturf'
+import { css } from 'astroturf'
 
 const styles = css`
   .button {
@@ -18,7 +17,7 @@ const styles = css`
 `
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-  readonly variant: 'primary' | 'secondary' | 'danger'
+  variant: 'primary' | 'secondary' | 'danger'
 }
 
 export default function ThemeButton ({ variant = 'primary', children, ...rest }: IButton) {
