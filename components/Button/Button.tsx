@@ -12,7 +12,7 @@ const styles = css`
     }
 
     &_danger {
-      background-color: red
+      background-color: red;
     }
   }
 `
