@@ -5,21 +5,25 @@ import styled, { css } from 'astroturf'
 const styles = css`
   .button {
     font-size: 30px;
-    background-color: red;
+    background-color: yellow;
     
-    &.primary {
-      background-color: blue;
+    &_primary {
+      background-color: green;
+    }
+
+    &_danger {
+      background-color: red
     }
   }
 `
 
-export interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement>{
-  primary: boolean
+interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement>{
+  readonly variant: 'primary' | 'secondary' | 'danger'
 }
 
-export default function ThemeButton ({ primary, children, ...rest }: IButton) {
+export default function ThemeButton ({ variant = 'primary', children, ...rest }: IButton) {
   return (
-    <button className={cs(styles.button, primary && styles.primary)} {...rest}>
+    <button className={cs(styles.button, styles[`button_${variant}`])} {...rest}>
       {children}
     </button>
   )
