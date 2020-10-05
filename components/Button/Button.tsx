@@ -1,20 +1,7 @@
+import React from 'react'
 import cs from 'classNames'
-import { css } from 'astroturf'
 
-const styles = css`
-  .button {
-    font-size: 30px;
-    background-color: yellow;
-    
-    &_primary {
-      background-color: green;
-    }
-
-    &_danger {
-      background-color: red;
-    }
-  }
-`
+import styles from './Button.module.scss'
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement>{
   variant: 'primary' | 'secondary' | 'danger'

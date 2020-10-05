@@ -1,5 +1,11 @@
-import Button from "./Button/Button";
+import Button from './Button'
+import Heading from './Heading'
+import Layout from './Layout'
+import Nav from './Nav'
 
 export {
-  Button
+  Button,
+  Heading,
+  Layout,
+  Nav
 }

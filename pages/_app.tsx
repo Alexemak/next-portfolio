@@ -1,9 +1,7 @@
-// @ts-ignore
+import React from 'react'
 import type { AppProps } from 'next/app'
-// import '../styles/global.scss'
+import '../styles/main.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />
+export default function MyApp ({ Component, pageProps }: AppProps): JSX.Element {
+  return <Component {...pageProps} />
 }
-
-export default MyApp

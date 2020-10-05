@@ -1,0 +1,49 @@
+@import "styles/base/variables";
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin: .75rem 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    color: map_get($colors, dark);
+    font-family: map_get($fonts, fira-normal);
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-decoration: none;
+    text-align: right;
+    padding: .5rem 2rem .5rem;
+
+    &_active {
+      color: map_get($colors, primary);
+
+      &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: .6rem;
+        height: 100%;
+        background-color: map_get($colors, primary);
+      }
+    }
+
+    &:hover {
+      color: map_get($colors, primary);
+    }
+  }
+}

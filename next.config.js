@@ -1,17 +1,14 @@
-const withCSS = require('@zeit/next-css')
+const withSass = require('@zeit/next-sass')
 
-module.exports = withCSS({
-  typescript: {
-    ignoreDevErrors: true,
-    ignoreBuildErrors: true,
-  },
+module.exports = withSass({
   cssModules: true,
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.tsx$/,
-      use: ['astroturf/loader'],
-    })
-
-    return config
-  },
+  async redirects () {
+    return [
+      {
+        source: '/',
+        destination: '/about',
+        permanent: false
+      }
+    ]
+  }
 })

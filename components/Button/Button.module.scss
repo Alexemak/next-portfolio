@@ -1,0 +1,35 @@
+@import "styles/base/variables";
+
+.button {
+  $self: &;
+  color: map_get($colors, white);
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+  font-family: map_get($fonts, fira-bold);
+  border-radius: 2rem;
+  border-width: .2rem;
+  border-style: solid;
+  background-color: transparent;
+  padding: .5rem 1.5rem;
+  cursor: pointer;
+
+  &_primary {
+    color: map_get($colors, primay);
+    border-color: map_get($colors, white);
+
+    &:hover {
+      background-color: map_get($colors, primary);
+      color: map_get($colors, white);
+    }
+  }
+
+  &_danger {
+    color: map_get($colors, danger);
+    border-color: map_get($colors, danger);
+
+    &:hover {
+      background-color: map_get($colors, danger);
+      color: map_get($colors, white);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "styles/base/variables";
+.heading {
+  font-family: map_get($fonts, fira-medium);
+  color: map_get($colors, dark);
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin: 0;
+}

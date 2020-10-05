@@ -1,0 +1,14 @@
+{
+  "projects":[
+    {
+      "id": 1,
+      "title": "Deals App #1",
+      "description": "Selling dress #1"
+    },
+    {
+      "id": 2,
+      "title": "Deals App #2",
+      "description": "Selling dress #2"
+    }
+  ]
+}
