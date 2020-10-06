@@ -25,6 +25,7 @@
     "json-server": "^0.16.2",
     "next": "latest",
     "next-google-fonts": "^1.2.1",
+    "nextjs-progressbar": "^0.0.6",
     "node-sass": "^4.14.1",
     "postcss-nested": "^4.1.2",
     "react": "^16.8.6",
