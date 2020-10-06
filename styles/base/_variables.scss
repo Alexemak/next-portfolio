@@ -1,8 +1,10 @@
 $colors: (
   white: #fff,
+  black: #000,
   primary: #33c1e3,
   danger: #e85f61,
   gray: #f6f6f6,
+  gray_second: #aeaeae,
   dark: #414141
 );
 
@@ -11,4 +13,8 @@ $fonts: (
   fira-normal: 'Fira-Sans-Normal',
   fira-medium: 'Fira-Sans-medium',
   fira-bold: 'Fira-Sans-bold',
+);
+
+$shadows: (
+  default: 0 0.01rem 0.03rem map_get($colors, black)
 )

@@ -3,12 +3,16 @@
     {
       "id": 1,
       "title": "Deals App #1",
-      "description": "Selling dress #1"
+      "description": "Selling dress #1",
+      "image": "example.png",
+      "type": "Web Application"
     },
     {
       "id": 2,
       "title": "Deals App #2",
-      "description": "Selling dress #2"
+      "description": "Selling dress #2",
+      "image": "example.png",
+      "type": "Web Application"
     }
   ]
 }

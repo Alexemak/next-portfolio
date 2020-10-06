@@ -9,6 +9,7 @@
     "mock": "json-server -w db.json -p 4200 -d 500"
   },
   "dependencies": {
+    "@drewbot/sass-flexbox-grid": "^2.0.7",
     "@typescript-eslint/eslint-plugin": "3",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",

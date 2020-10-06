@@ -1,0 +1,58 @@
+@import "styles/base/variables";
+@import "styles/base/grid";
+
+.projects {
+  $self: &;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @extend .row;
+
+  &__item {
+    @extend .col-sm-12;
+    @extend .col-md-4;
+    background-color: map_get($colors, white);
+
+    &:hover {
+      #{ $self }__title {
+        color: map_get($colors, danger);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: .5rem;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-family: map_get($fonts, fira-medium);
+    color: map_get($colors, primary);
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: map_get($fonts, fira-normal);
+    color: map_get($colors, dark);
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    margin: 0;
+  }
+
+  &__type {
+    font-family: map_get($fonts, fira-bold);
+    color: map_get($colors, gray_second);
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+}
