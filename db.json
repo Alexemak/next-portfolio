@@ -14,5 +14,28 @@
       "image": "example.png",
       "type": "Web Application"
     }
+  ],
+  "career": [
+    {
+      "id": 1,
+      "title": "First step",
+      "description": "First description",
+      "image": "example.png",
+      "period": "2015"
+    },
+    {
+      "id": 2,
+      "title": "Second step",
+      "description": "Second description",
+      "image": "example.png",
+      "period": "2015"
+    },
+    {
+      "id": 3,
+      "title": "Third step",
+      "description": "Third description",
+      "image": "example.png",
+      "period": "2015"
+    }
   ]
 }

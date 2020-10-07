@@ -1,5 +1,6 @@
 import React from 'react'
-import { Heading, Layout, Blocks } from '../../components'
+import Head from 'next/head'
+import { Heading, Layout, Button, Blocks } from '../../components'
 
 const { Projects } = Blocks
 

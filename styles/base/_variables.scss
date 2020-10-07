@@ -2,9 +2,14 @@ $colors: (
   white: #fff,
   black: #000,
   primary: #33c1e3,
+  lightblue: #94e0f2,
   danger: #e85f61,
   gray: #f6f6f6,
   gray_second: #aeaeae,
+  gray_third: #515153,
+  gray_fourth: #5a5a5a,
+  gray_fifth: #ddd,
+  gray_sixth: #727272,
   dark: #414141
 );
 
@@ -21,5 +26,6 @@ $shadows: (
 );
 
 $radius: (
-  default: 2rem
+  default: 2rem,
+  career: 1rem
 )

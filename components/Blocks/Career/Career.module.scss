@@ -1,0 +1,137 @@
+@import "styles/base/variables";
+
+.career {
+  $self: &;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    position: relative;
+    min-height: 10.7rem;
+
+    &:first-of-type {
+      #{ $self }__period {
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &:last-of-type {
+      #{ $self }__period {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &:hover {
+      #{ $self }__content {
+        background-color: map_get($colors, primary);
+      }
+
+      #{ $self }__title,
+      #{ $self }__description {
+        color: map_get($colors, white);
+      }
+
+      #{ $self }__dot {
+        &:after {
+          transform: scale(2);
+        }
+      }
+      #{ $self }__time {
+        transform: scale(1.25);
+        color: map_get($colors, primary);
+      }
+    }
+  }
+
+  &__period {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    &:after,
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: .1rem;
+      background-color: map_get($colors, gray_fifth);
+      height: 50%;
+    }
+
+    &:after {
+      right: 2rem;
+      top: 60%;
+    }
+
+    &:before {
+      right: 2rem;
+      bottom: 60%;
+    }
+  }
+
+  &__time {
+    font-family: map_get($fonts, fira-bold);
+    color: map_get($colors, gray_sixth);
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    transition: .3s linear;
+  }
+
+  &__dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: map_get($colors, primary);
+    border-radius: 100%;
+    margin: 0 1.5rem 0 1rem;
+    position: relative;
+
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: map_get($colors, lightblue);
+      border-radius: 100%;
+      z-index: -5;
+      transition: .3s linear;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    cursor: pointer;
+    background-color: map_get($colors, white);
+    border-radius: map_get($radius, career);
+    box-shadow: map_get($shadows, default);
+    padding: 2rem;
+  }
+
+  &__title {
+    font-family: map_get($fonts, fira-normal);
+    color: map_get($colors, gray_fourth);
+    margin: 0 0 1rem;
+    font-size: 2.1rem;
+    line-height: 2.6rem;
+  }
+
+  &__description {
+    margin: 0;
+    font-family: map_get($fonts, fira-light);
+    color: map_get($colors, gray_third);
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+}
